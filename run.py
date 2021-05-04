@@ -1,7 +1,7 @@
 import os
 import sys
 
-def main(args):
+def main():
 	
 	os.system(f"set FLASK_APP=webapp.py")
 	os.system(f"flask run --host=0.0.0.0")
@@ -10,4 +10,4 @@ def main(args):
 
 if __name__ == '__main__':
 	
-	sys.exit(main(sys.argv))
+	main()
