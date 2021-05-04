@@ -35,24 +35,30 @@ def main():
                                         name text NOT NULL
                                     ); """
 
-	sql_create_items_table = """CREATE TABLE IF NOT EXISTS tasks (
+	sql_create_items_table = """CREATE TABLE IF NOT EXISTS ITEMS (
                                     id integer PRIMARY KEY,
-                                    name text NOT NULL,
-                                    bought_by integer NOT NULL,
-                                    date text NOT NULL,
-                                    FOREIGN KEY (bought_by) REFERENCES Users (id)
+                                    name text NOT NULL
                                 );"""
+                                
+	sql_create_bought_by_table = """ CREATE TABLE IF NOT EXISTS BOUGHT_BY (
+                                        id integer PRIMARY KEY,
+                                        user_id integer NOT NULL
+                                        item_id integer NOT NULL
+                                        date text,
+                                        FOREIGN KEY (user_id) REFERENCES Users (id)
+                                        FOREIGN KEY (item_id) REFERENCES Items (id)
+                                    ); """
 
     # create a database connection
 	conn = create_connection(full_db_path)
 
     # create tables
 	if conn is not None:
-        # create projects table
+		
 		create_table(conn, sql_create_users_table)
-
-        # create tasks table
 		create_table(conn, sql_create_items_table)
+		create_table(conn, sql_create_bought_by_table)
+		
 	else:
 		print("Error! cannot create the database connection.")
 
