@@ -49,7 +49,7 @@ To get a local copy up and running follow these simple steps.
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/JocCordova/which-coffee-app.git
+   git clone https://github.com/JocCordova/wg-bars.git
    ```
 2. Install Flask
    ```sh
