@@ -71,6 +71,12 @@ Flask runs in port 5000 as standard.
    flask run --host=0.0.0.0
    ```
 * (Windows)
+   ```sh
+   set FLASK_APP=webapp.py
+   flask run --host=0.0.0.0
+   ```
+   or
+   <br></br>
   ```sh
    python run.py
   ```
