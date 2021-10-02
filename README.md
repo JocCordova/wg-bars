@@ -1,7 +1,7 @@
 # WG Bars
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-WG Bars is a webapp that lets you keep track of items being bought in a WG.
+WG Bars is a webapp that lets you keep track of items being bought by the members in a shared flat.
 
 The tables in the Database are:
 
